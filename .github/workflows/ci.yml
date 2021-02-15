@@ -17,12 +17,12 @@ jobs:
 
       - name: Install gettext for envsubst
         run: |
-          sudo apt install gettext-base
+          apt install gettext-base
 
       - name: Install jq
         run: |
-          sudo curl -o /usr/bin/jq -L https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64
-          sudo chmod +x /usr/bin/jq
+          curl -o /usr/bin/jq -L https://github.com/stedolan/jq/releases/download/jq-1.6/jq-linux64
+          chmod +x /usr/bin/jq
 
       - name: Run tests
         run: |
