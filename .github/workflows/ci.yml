@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - explicit-php-version
 
 jobs:
   test:
