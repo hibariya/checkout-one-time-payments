@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - e2e-tmp
 
 env:
   STRIPE_PUBLISHABLE_KEY: ${{ secrets.TEST_STRIPE_PUBLISHABLE_KEY }}
@@ -68,6 +69,7 @@ jobs:
         with:
           repository: 'stripe-samples/sample-ci'
           path: 'sample-ci'
+          ref: e2e
 
       - name: Setup dependencies
         run: |

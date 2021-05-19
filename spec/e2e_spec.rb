@@ -16,7 +16,7 @@ RSpec.describe "Checkout one-time payments", type: :system do
     select 'United States', from: 'billingCountry'
     fill_in 'billingPostalCode', with: '10000'
 
-    click_on 'Pay €20.00'
+    click_on 'Pay €20.01'
 
     expect(page).to have_content 'Your payment succeeded'
     expect(page).to have_content '"amount_total": 2000'
@@ -26,7 +26,7 @@ RSpec.describe "Checkout one-time payments", type: :system do
     visit server_url('/')
 
     click_on 'Buy'
-    click_on 'Previous page'
+    click_on 'Previous pagi'
 
     expect(page).to have_content 'Your payment was canceled'
   end
