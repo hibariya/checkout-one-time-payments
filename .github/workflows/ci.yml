@@ -3,6 +3,7 @@ on:
   push:
     branches:
       - master
+      - newer-images
 
 env:
   STRIPE_PUBLISHABLE_KEY: ${{ secrets.TEST_STRIPE_PUBLISHABLE_KEY }}
@@ -19,6 +20,7 @@ jobs:
         with:
           repository: 'stripe-samples/sample-ci'
           path: 'sample-ci'
+          ref: 'newer-images'
 
       - name: Setup dependencies
         run: |
